@@ -1,11 +1,13 @@
-class Motorcycle implements MotorVehicle {
+package Unit6;
+
+class Truck implements TruckVehicle {
     private String make;
     private String model;
     private int year;
-    private int numWheels;
-    private String motorcycleType;
+    private double cargoCapacity;
+    private String transmissionType;
 
-    public Motorcycle(String make, String model, int year) {
+    public Truck(String make, String model, int year) {
         this.make = make;
         this.model = model;
         this.year = year;
@@ -39,22 +41,22 @@ class Motorcycle implements MotorVehicle {
     }
 
     @Override
-    public int getNumWheels() {
-        return numWheels;
+    public double getCargoCapacity() {
+        return cargoCapacity;
     }
 
     @Override
-    public void setNumWheels(int numWheels) {
-        this.numWheels = numWheels;
+    public void setCargoCapacity(double cargoCapacity) {
+        this.cargoCapacity = cargoCapacity;
     }
 
     @Override
-    public String getMotorcycleType() {
-        return motorcycleType;
+    public String getTransmissionType() {
+        return transmissionType;
     }
 
     @Override
-    public void setMotorcycleType(String motorcycleType) {
-        this.motorcycleType = motorcycleType;
+    public void setTransmissionType(String transmissionType) {
+        this.transmissionType = transmissionType;
     }
 }
