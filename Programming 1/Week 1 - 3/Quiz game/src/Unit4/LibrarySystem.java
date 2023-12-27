@@ -1,27 +1,9 @@
+package Unit4;
+
+import Unit4.Book;
+
 import java.util.*;
-/*
-I created a class called "Book" as I would need subroutines to get the title, author, and quantity of each book object
-in order to determine availability and calculate quantity
- */
-class Book {
-    private int quantity;
-    private String author;
-    private String title;
 
-    public Book(String title, String author, int quantity) {
-        this.author = author;
-        this.title = title;
-        this.quantity = quantity;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-}
 /*
 I used a HashMap as this apparently is the most appropriate method to use. Initially I thought I could use a
 dictionary (because I am used to Python), but then found out a HashMap is a similar data structure that implements
@@ -80,7 +62,7 @@ public class LibrarySystem {
                     Book addedBook = LIBRARY.get(title);
                     /*
                     The if-else statements determines if the book already exists, and if so, add the inputted value to
-                    the existing quantity. If it does not, a new Book object is created with all the specified
+                    the existing quantity. If it does not, a new Unit4.Book object is created with all the specified
                     parameters
                      */
                     if (addedBook != null) {
@@ -122,7 +104,7 @@ public class LibrarySystem {
                     } else if (borrowedBook != null) {
                         System.out.println("No books available for borrowing.");
                     } else {
-                        System.out.println("Book not found: " + title);
+                        System.out.println("Unit4.Book not found: " + title);
                     }
                     break;
                 case 3:
@@ -145,7 +127,7 @@ public class LibrarySystem {
                         returnedBook.setQuantity(returnedBook.getQuantity() + returnQuantity);
                         System.out.println(title + " returned." + returnedBook.getQuantity() + " remaining.");
                     } else {
-                        System.out.println("Book not found: " + title);
+                        System.out.println("Unit4.Book not found: " + title);
                     }
                     break;
                 case 4:
